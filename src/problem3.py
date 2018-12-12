@@ -163,7 +163,7 @@ def problem3a(r, s):
           -- 5 cubed is   125, whose sum of digits is  8, which is NOT odd.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ###########################################################################
@@ -175,8 +175,8 @@ def problem3a(r, s):
     summing = 0
     for k in range(s - r + 1):
         if sum_of_digits((k + r) ** 3) % 2 == 1:
-            summing = summing + sum_of_digits((k + r))
-        return summing
+            summing = summing + (k + r)
+    return summing
 
 
 def run_test_problem3b():
@@ -285,10 +285,14 @@ def problem3b(m, r):
            which is approximately 12.020144157845959.
      """
     ###########################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
 
+    summing = 0
+    for k in range(m):
+        summing = summing + ((k +1) / ((r + k) ** (k + 1)))
+    return summing
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
