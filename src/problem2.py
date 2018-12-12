@@ -3,8 +3,8 @@ Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Cleo Barmes.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -45,6 +45,35 @@ def test_factor_sum():
     # WRITE YOUR TESTS BELOW HERE:
     ###########################################################################
 
+    # Test 1:
+    expected = 11  # This is APPROXIMATELY the correct answer.
+    answer = factor_sum(28)
+    print('Test 1 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
+    # Test 2:
+    expected = 4  # This is APPROXIMATELY the correct answer.
+    answer = factor_sum(25)
+    print('Test 2 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 10 # This is APPROXIMATELY the correct answer.
+    answer = factor_sum(36)
+    print('Test 3 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
+    # Test 4:
+    expected = 6 # This is APPROXIMATELY the correct answer.
+    answer = factor_sum(15)
+    print('Test 4 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
+    # Test 5:
+    expected = 6 # This is APPROXIMATELY the correct answer.
+    answer = factor_sum(20)
+    print('Test 5 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
 
 def factor_sum(n):
     """
