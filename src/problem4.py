@@ -74,6 +74,40 @@ def problem4(number_of_stairs, step_size, starting_point, window):
     #            of the stair steps.
     # -------------------------------------------------------------------------
 
+    start_x = starting_point.x
+    start_y = starting_point.y
+
+    for k in range(number_of_stairs):
+
+        start_y = start_y - step_size
+        level = rg.Line(rg.Point(start_x,start_y), rg.Point(start_x + step_size, start_y))
+        level.thickness = 3
+        start_x = start_x + step_size
+        level.attach_to(window)
+        window.render()
+
+    dot = rg.Circle(rg.Point(start_x,start_y), 3)
+    dot.fill_color = 'black'
+    dot.attach_to(window)
+    window.render()
+
+    start2_x = starting_point.x
+    start2_y = starting_point.y
+
+    dot2 = rg.Circle(rg.Point(start2_x, start2_y), 3)
+    dot2.fill_color = 'black'
+    dot2.attach_to(window)
+    window.render()
+
+    for k in range(number_of_stairs):
+
+        start2_y = start2_y - step_size
+        level2 = rg.Line(rg.Point(start2_x,start2_y), rg.Point(start2_x, start2_y + step_size))
+        level2.color = 'magenta'
+        level2.thickness = 3
+        start2_x = start2_x + step_size
+        level2.attach_to(window)
+        window.render()
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
