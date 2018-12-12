@@ -101,7 +101,7 @@ def problem1(square, thickness, window):
       :type window:    rg.RoseWindow
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
+    # DONE: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
@@ -118,6 +118,15 @@ def problem1(square, thickness, window):
     pat.fill_color = square.fill_color
     pat.outline_thickness = thickness
     pat.attach_to(window)
+
+    left = sponge.center.x - (sponge.length_of_each_side / 2)
+    middle = sponge.center.y
+    left_middle = rg.Point(left, middle)
+
+    stick = rg.Line(pat.center, left_middle)
+    stick.attach_to(window)
+    stick.color = square.outline_color
+    stick.thickness = thickness
 
     window.render()
 
